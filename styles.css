@@ -1,0 +1,270 @@
+/* ═══════════════════════════════════════════════
+   Dating App Safety · Styles
+   Fonts: Gyst Variable (h1/sub/ph-title) · Fredoka (all else)
+   Panel palette: #260F26 (titles) · #582358 (info)
+═══════════════════════════════════════════════ */
+
+@font-face {
+  font-family: 'Gyst Variable';
+  src: url('GystVariable.otf') format('opentype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #F8F5F2;
+  overflow: hidden;
+}
+
+/* ── Two-column layout ── */
+
+#container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+}
+
+/* ── Left col ── */
+
+#left-col {
+  width: 66.666%;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #EDE7ED;
+  padding: 0;
+}
+
+/* ── Left top — h1 + hint ── */
+
+#left-top {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  padding: 8px 20px 0;
+  flex-shrink: 0;
+  margin-bottom: -60px;
+}
+
+h1 {
+  font-family: 'Gyst Variable', Georgia, serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #260F26;
+  line-height: 1.45;
+}
+
+#hint-left {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #752F75;
+  letter-spacing: 0.04em;
+}
+
+/* ── Chart — fills remaining height ── */
+
+#chart-wrap {
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  margin-top: 0px;
+}
+
+#fan-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: default;
+}
+
+.strand { cursor: pointer; }
+
+/* ── Right col ── */
+
+#right-col {
+  width: 33.333%;
+  padding: 14px 28px 16px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+/* ── Right top — subtitle + divider ── */
+
+#right-top {
+  flex-shrink: 0;
+  margin-bottom: 0;
+}
+
+.sub {
+  font-family: 'Gyst Variable', Georgia, serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #260F26;
+  letter-spacing: 0.14em;
+}
+
+
+/* ── Description ── */
+
+#description {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: #260F26;
+  line-height: 1.8;
+  margin-top: 20px;
+  margin-bottom: 18px;
+}
+
+/* ── Number nav ── */
+
+#nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 18px;
+}
+
+.wb {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #EDE7ED;
+  background: none;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: #752F75;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.1s, color 0.1s, border-color 0.1s;
+}
+
+.wb:hover,
+.wb.sel {
+  background: #260F26;
+  color: #F8F5F2;
+  border-color: #260F26;
+}
+
+/* ── Data block ── */
+
+#panel {
+  width: 100%;
+  background: #F8F5F2;
+  border: 1px solid #EDE7ED;
+  padding: 10px 16px 16px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.65;
+  color: #260F26;
+  display: block;
+  height: 380px;
+  overflow: hidden;
+}
+
+#p-body {
+  height: calc(100% - 44px);
+  overflow-y: auto;
+}
+
+.ph {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #EDE7ED;
+}
+
+.ph-title {
+  font-family: 'Gyst Variable', Georgia, serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: #260F26;
+}
+
+.ph-close {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #582358;
+  line-height: 1;
+  padding: 0;
+  font-family: 'Fredoka', sans-serif;
+  margin-top: 4px;
+  margin-bottom: 6px;
+  margin-left: 8px;
+  margin-right: 6px;
+}
+
+.ph-close:hover { color: #260F26; }
+
+.fl {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #260F26;
+  margin-top: 16px;
+  margin-bottom: 3px;
+}
+
+.fv {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: #582358;
+}
+
+.bar { display: flex; gap: 4px; margin-top: 3px; }
+
+.bar-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 1px solid #EDE7ED;
+}
+
+.bar-dot.on { background: #260F26; border-color: #260F26; }
+
+.outcome {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: #260F26;
+}
+
+.oi {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: #260F26;
+}
+
+#panel-default {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: #582358;
+  line-height: 1.7;
+  padding-top: 4px;
+}
