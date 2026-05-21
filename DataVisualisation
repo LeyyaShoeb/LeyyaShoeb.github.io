@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dating App Safety · 44 Women · South Africa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="container">
+
+    <!-- LEFT 66.666% — title · hint · diagram -->
+    <div id="left-col">
+      <div id="left-top">
+        <h1>Women's Dating App Safety Experiences</h1>
+        <p id="hint-left">Hover or click to view a specific woman's data</p>
+      </div>
+      <div id="chart-wrap">
+        <svg id="fan-svg" viewBox="0 0 800 715"></svg>
+      </div>
+    </div>
+
+    <!-- RIGHT 33.333% — subtitle · divider · description · panel · numbers -->
+    <div id="right-col">
+
+      <div id="right-top">
+        <p class="sub">44 Women &nbsp;·&nbsp; South Africa &nbsp;·&nbsp; 2026</p>
+        <div class="title-rule"></div>
+      </div>
+
+      <p id="description">With the rise of gender based violence and femicide in South Africa, women have become more aware of the dangers that dating apps can present. This data visualisation suggests that the precautions women take online are so extensive that danger largely remains in the digital space. 95% rated safety as their top priority before meeting, 82% experienced suspicious behaviour online, and 91% avoided meeting someone due to safety concerns. Yet only 18% reported a traumatic in person experience, suggesting that online vigilance is successfully keeping women safer offline.</p>
+
+      <div id="panel">
+        <div class="ph">
+          <span class="ph-title" id="p-title">Woman #—</span>
+          <button class="ph-close" id="p-close">×</button>
+        </div>
+        <div id="p-body"></div>
+      </div>
+
+      <div id="nav"></div>
+
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
